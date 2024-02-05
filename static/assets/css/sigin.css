@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17, 143, 247);
+}
+
+.cointainer{
+    height: 350px;
+    width: 280px;
+
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cointainer h2{
+    margin-top: 20px;
+    color: rgb(112, 112, 245);
+}
+
+.main{
+    margin-top: 10px;
+    text-align: start;
+}
+
+.text{
+    margin-bottom: 5px;
+}
+input{
+    height: 28px;
+    width: 90%;
+    border-radius: 4px;
+}
+
+.input{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+button{
+    height: 28px;
+    width: 90%;
+    border-radius: 4px;
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(15, 90, 239);   
+}
+
+.but{
+    margin-top: 8px;
+}
+
+.for{
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    columns: rgb(15, 90, 239);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.msg{
+    background-color: rgb(213, 49, 28);
+    color: white;
+    border-radius: 5px;
+}

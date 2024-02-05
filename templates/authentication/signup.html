@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign In page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static '/assets/css/sigin.css' %}" />
+  </head>
+
+  <body>
+    <form action="/auth/signup/" method="POST">
+      {% csrf_token %}
+      <div class="cointainer">
+        <h2>Sign In</h2>
+
+        {% for message in messages %}
+        <strong class="msg">{{message}}</strong>
+        {% endfor %}
+        <div class="main">
+          <div class="input">
+            <div class="text">
+              <label for="">Email Address</label>
+            </div>
+            <input type="email" name="email1" placeholder="Enter your email" />
+          </div>
+          <div class="input">
+            <div class="text">
+              <label for="">Password</label>
+            </div>
+            <input
+              type="password"
+              name="pass1"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="input">
+            <div class="text">
+              <label for="">Confirm Password</label>
+            </div>
+            <input
+              type="password"
+              name="pass2"
+              placeholder=" Enter Confirm password"
+            />
+          </div>
+          <div class="input">
+            <button type="submit">SignIn</button>
+          </div>
+        </div>
+        <div class="but">
+          <div class="for">
+            <a href="/auth/login/">Login</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
